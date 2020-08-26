@@ -122,7 +122,7 @@ GameManager.prototype.addRandomTile = function () {
       check(0, -1, 0, -1);
       check(0, 1, 0, 1);
 
-      if (bvalue == 2147483647) {bvalue = 3;}
+      if (bvalue == 2147483647) {bvalue = Math.random() < 0.9918 ? 2 : Infinity;}
     }
 
     var tile = new Tile(bcell, bvalue);
@@ -183,7 +183,7 @@ GameManager.prototype.moveTile = function (tile, cell) {
 };
 
 GameManager.test = function (value) {
-  var test = 3;
+  var test = 2;
   while (true)
   {
     if (test > value)
